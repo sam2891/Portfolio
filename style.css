@@ -1,0 +1,230 @@
+@font-face {
+    font-family:MYTemplate;
+    src: url(campus.ttf.ttf);
+    font-family: Mine;
+    src:url(coco.ttf.ttf);
+    font-family: new;
+    src: url(Grooven-Shine.otf);
+}
+*{
+    margin:0%;
+    padding:0%;
+    box-sizing: border-box;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+}
+body{
+    background:#1f242d;
+    color:var(--primary-color); 
+}
+
+
+.header{
+    position:fixed;
+    top:0%;
+    left:0%;
+    width:100%;
+    padding: 20px 10%;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    z-index:100;   
+}
+.logo{
+    font-size: 25px;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 100;
+    cursor:default;
+    animation:slideRight 2s ease-in;
+}
+.navbar a{
+    display: inline-block;
+    font-size: medium;   
+    color:var(--primary-color);
+    text-decoration:none;
+    font-weight: 50;
+    cursor:default;
+    margin-left: 25px;
+    transition: 2.5s;
+    cursor:default;
+    animation:slideTop 3s ease forwards;
+    animation-delay: calc(.2s *var(--i));    
+}
+.navbar a:hover,
+.navbar a.active
+{    
+    color:rgb(238, 160, 16);
+}
+
+.home{
+    position:relative;
+    width: 100%;
+    height:100vh;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 70px 10% 0;
+}
+.home-content{
+    max-width: 600px;
+}
+.home-content h3{
+    font-size:xx-large; 
+    font-weight:700; 
+    animation:slideBottom 3s ease-in;
+    animation-delay: 1s;    
+}
+.home-content h3:nth-of-type(2){
+    margin-bottom:30px;
+    animation:slideTop 3s ease-in;
+    animation-delay: 1s;
+}
+
+
+.home-content h3 span{
+    display:inline-block;
+    font-size: xx-large;
+    font-weight: 700;
+    color: var(--secondary-color);
+    padding: 5px;
+    animation:slideBottom 2s ease backwards;
+    animation-delay: 2s;
+
+    
+}
+.home-content h1{
+    font-size:50px;
+    font-weight: 700;
+    margin:-3px 0;
+    padding: 5px;
+    animation:slideRight 2s ease backwards;
+    animation-delay: 2.1s;
+
+}
+.Intro-content h3{
+    padding: 5px;
+    animation:slideRight 2s ease backwards;
+    animation-delay: 2.2s;
+}
+.home-img img{
+    
+  max-width: 500px;
+  padding: 5px;
+animation:zoomin 2.7s ease backwards;
+ animation-delay:.2s;
+  
+  
+}
+ #icon {
+    width: 30px;
+    cursor:pointer;
+ }
+ .navbar {
+    flex :1;
+    text-align: right;
+ }
+ :root {
+   --primary-color:#edf2fc;
+    --secondary-color:#0ef;
+ }
+  .dark-theme{  
+    --primary-color:black;
+    --secondary-color:white;
+ }
+
+.home-content p{
+    font-size: 16px;
+    padding: 5px;
+    animation:slideLeft 2s ease backwards;
+    animation-delay: 2.3s;
+
+}
+
+.social-media a{
+ 
+ 
+    display:inline-flex;
+    width:40px;
+    justify-content: center;
+    align-items: center;
+    background:transparent;
+    border:1px solid var(--primary-color);
+    color:var(--secondary-color);
+    border-radius:75px;
+    font-size:20px;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    transition: .8s ease;
+    font-size: 16px;
+    padding: 5px;
+    animation:slideLeft 2s ease backwards;
+    animation-delay: calc(.2s *  var(--i));
+
+    
+}
+
+.social-media a:hover{
+  background:var(--secondary-color);
+  color:#1f242d;
+  box-shadow: 0 0 25px;
+}
+
+.btn{
+    display: inline-block;
+    padding:12px 28px;
+    background:var(--secondary-color);
+    font-family:new;
+    color:#1f242d;
+    border:5px;
+    border-radius:50px;    
+    text-decoration: none;
+    letter-spacing:2px;
+    box-shadow: 0 0 15px var(--secondary-color);
+    padding: 5px;
+    animation:slideLeft 2s ease backwards;
+    animation-delay:2.5s; 
+}
+
+/* key Frame Animation */
+
+@keyframes slideRight{
+    0%{
+        transform:translateX(-100px);
+     opacity:0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity:1;
+    }
+} 
+@keyframes slideTop{
+    0%{
+        transform:translateY(100px);
+     opacity:0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity:1;
+    }
+}
+@keyframes slideLeft{
+    0%{
+        transform:translateX(-100px);
+     opacity:0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity:1;
+    }
+} 
+@keyframes zoomin{
+    0%{
+        transform:scale(0);
+     opacity:0;
+    }
+    100%{
+        transform:scale(1);
+        opacity:1;
+    }
+}
